@@ -1,0 +1,79 @@
+/* src/components/Hobbies/Hobbies.css */
+
+.hobbies {
+    padding: 40px;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center; 
+}
+
+.hobbies-heading {
+    font-size: 1.8rem; 
+    font-family: inherit; 
+    margin-right: 100px; 
+    margin-bottom: 20px; 
+}
+
+.hobbies-list {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.hobby-item {
+    background: linear-gradient(135deg, #666, #888); 
+    border-radius: 8px; 
+    font-size: 1rem; 
+    width: 160px; 
+    text-align: center; 
+    color: #fff; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer; 
+    padding: 15px; 
+}
+
+.hobby-item:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+@media (max-width: 768px) {
+    .hobbies {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .hobbies-heading {
+        margin-right: 0; 
+        margin-bottom: 15px; 
+        font-size: 1.5rem; 
+    }
+
+    .hobbies-list {
+        gap: 15px; 
+    }
+
+    .hobby-item {
+        width: 140px; 
+        font-size: 0.9rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .hobbies-heading {
+        font-size: 1.2rem; 
+        margin-bottom: 10px; 
+    }
+
+    .hobbies-list {
+        gap: 10px; 
+    }
+
+    .hobby-item {
+        width: 120px; 
+        font-size: 0.85rem; 
+        padding: 10px; 
+    }
+}

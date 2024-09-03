@@ -1,0 +1,69 @@
+/* src/components/WorkHighlights/WorkHighlights.css */
+
+.work-highlights {
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.work-heading {
+    font-size: 1.8rem; /* Font size for the heading */
+    margin-bottom: 40px; /* Margin to separate from other sections */
+}
+
+.snapshot-gallery {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping to keep items in one row */
+    overflow-x: auto; /* Enables horizontal scrolling */
+    gap: 15px; /* Space between images */
+    padding: 20px 0; /* Padding above and below gallery */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+.snapshot-gallery::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in WebKit browsers (Chrome, Safari, etc.) */
+}
+
+.snapshot {
+    height: 160px; /* Size of snapshots */
+    width: auto; /* Auto width to maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for snapshots */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation on hover */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.snapshot:hover, .snapshot:active {
+    transform: scale(1.1) translateY(-5px); /* Slight enlargement and upward movement on hover or click */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Shadow effect to make it appear raised */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .work-heading {
+        font-size: 1.5rem; /* Smaller font size for smaller screens */
+        margin-bottom: 30px; /* Reduced margin */
+    }
+
+    .snapshot-gallery {
+        gap: 10px; /* Reduced space between snapshots */
+    }
+
+    .snapshot {
+        height: 120px; /* Smaller size for snapshots */
+    }
+}
+
+@media (max-width: 480px) {
+    .work-heading {
+        font-size: 1.2rem; /* Even smaller font size */
+        margin-bottom: 20px; /* Further reduced margin */
+    }
+
+    .snapshot-gallery {
+        gap: 5px; /* Minimal space between snapshots */
+    }
+
+    .snapshot {
+        height: 100px; /* Further reduced size for snapshots */
+    }
+}

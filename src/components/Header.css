@@ -1,0 +1,160 @@
+/* src/components/Header.css */
+
+/* Existing styles */
+.header {
+    display: flex;
+    justify-content: space-between; /* Positions content to the left and right */
+    align-items: center; /* Aligns content vertically center */
+    padding: 40px 100px; /* Increased padding to move content further from top and sides */
+    position: relative; /* Ensures the line is positioned correctly */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the content */
+    text-align: center; /* Center-align text */
+    gap: 20px;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the content */
+    text-align: center; /* Center-align text */
+    gap: 20px;
+    padding: 40px;
+    margin-top: 50px; /* Move content further away from the top */
+    margin-left: auto; /* Push content to the right */
+    margin-right: 80px; /* Move content further away from the right */
+}
+
+/* Profile Image */
+.profile-img {
+    width: 200px; /* Profile picture size */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff; /* Optional border for styling */
+    animation: fadeIn 2s ease-out; /* Animation for entrance */
+}
+
+/* Heading */
+h1 {
+    font-size: 2.5rem; /* Adjust font size */
+    color: #fff;
+    margin: 0; /* Removed margin to control spacing directly */
+    animation: fadeIn 2s ease-out; /* Animation for entrance */
+}
+
+/* Buttons */
+.show-button, .download-button {
+    padding: 12px 24px;
+    border: none;
+    background: linear-gradient(135deg, #444, #888); /* Gradient from dark to light grey */
+    color: #fff; /* White text for contrast */
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Adjust font size */
+}
+
+.show-button:hover, .download-button:hover {
+    background: linear-gradient(135deg, #555, #aaa); /* Lighten on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+/* Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Start slightly above */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Description */
+.description {
+    max-width: 400px;
+    color: #ddd;
+    font-size: 0.875rem; /* Smaller font size */
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* HR Divider */
+.divider {
+    border: 0;
+    height: 1px;
+    background: #555; /* Color of the line */
+    margin: 40px 0; /* Spacing above and below the line */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items */
+        padding: 20px; /* Reduced padding */
+    }
+
+    .left-content {
+        margin-bottom: 20px; /* Space between sections */
+    }
+
+    .right-content {
+        margin: 10px 0; /* Margin above and below */
+        margin-right: 0; /* Remove right margin */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .profile-img {
+        width: 150px; /* Smaller size for smaller screens */
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 2rem; /* Smaller font size */
+    }
+
+    .show-button, .download-button {
+        padding: 10px 20px; /* Smaller padding for buttons */
+        font-size: 0.875rem; /* Smaller font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px; /* Further reduced padding for smaller screens */
+    }
+
+    .left-content {
+        margin-bottom: 15px; /* Further space between sections */
+    }
+
+    .right-content {
+        margin: 5px 0; /* Further reduced margin */
+        margin-right: 0; /* Ensure content is fully visible */
+        margin-left: 0; /* Ensure content is fully visible */
+    }
+
+    .profile-img {
+        width: 120px; /* Even smaller size */
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Further reduced font size */
+    }
+
+    .show-button, .download-button {
+        padding: 8px 16px; /* Further reduced padding */
+        font-size: 0.75rem; /* Smaller font size */
+    }
+}

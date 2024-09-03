@@ -1,0 +1,9 @@
+/* src/App.css or src/components/Contact/Contact.css */
+
+.section-divider {
+  border: none; /* Remove default border */
+  height: 0.5rem; /* Very thin height */
+  background-color: #ccc; /* Light grey color */
+  margin: 40px 0; /* Space above and below the line */
+  opacity: 0.5; /* Slightly transparent for subtle visibility */
+}

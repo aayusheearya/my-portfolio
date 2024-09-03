@@ -1,0 +1,8 @@
+/* src/index.css */
+body {
+    background: linear-gradient(135deg, #000, #333); /* Example background gradient */
+    color: #fff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
